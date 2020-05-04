@@ -3,23 +3,6 @@ from pytube import Playlist
 from tqdm import tqdm
 
 
-
-import warnings
-
-def fxn():
-    warnings.warn("deprecated", DeprecationWarning)
-
-with warnings.catch_warnings():
-    warnings.simplefilter("ignore")
-    fxn()
-
-
-
-
-
-
-# https://www.youtube.com/watch?v=II8V0_ilRbU&list=PLdJYl6XU45uLIHaPBQEj-cEMynAl0oeiz
-
 print("Video linkini giriniz : ")
 link = input()
 
