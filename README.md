@@ -2,8 +2,8 @@
 
 
 
-# Dependencies
+# Dependencies - Libraries
 
--pytube 
--tqdm
+1) pytube
+2) tqdm
 
