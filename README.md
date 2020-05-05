@@ -1,4 +1,4 @@
-# 2 Farklı Algoritmada Python Youtube video ve playlist indirme projesi
+# 2 Farklı algoritmada python youtube video ve playlist indirme projesi
 
 
 
