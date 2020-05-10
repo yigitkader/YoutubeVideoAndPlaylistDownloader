@@ -29,6 +29,8 @@ select = int(input())
 
 print("Video Linki :")
 url = input()
+print("İndirme işleminiz başlıyor..")
+print()
 
 if select == 1 and url != "":
     downloadVideo(url)
