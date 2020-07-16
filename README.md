@@ -4,6 +4,6 @@
 
 # Dependencies - Libraries
 
-1) pytube
+1) pytube3
 2) tqdm
 
