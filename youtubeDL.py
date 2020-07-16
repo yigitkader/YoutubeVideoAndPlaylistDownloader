@@ -4,31 +4,33 @@ from tqdm import tqdm
 
 
 def downloadVideo(url):
-    yt = YouTube(url)
-    #higher resolution
-    yt.streams.filter(progressive=True).order_by('resolution').desc().first().download()
+    try:
+        yt = YouTube(url)
+        
+        yt.streams.get_highest_resolution().download()
 
-    #YouTube(url).streams.first().download()
+        #yt.streams.filter(progressive=True, file_extension='mp4').order_by('resolution')[-1].download()
+
+    except :
+        print("A problem occured while dowloading video")
+
 
 def downloadPlaylist(url):
-    pl = Playlist(url)
-    #pl.download_all()
-    allLinks = []
-    for i in pl.video_urls:
-        allLinks.append(i)
+    try:
+        pl = Playlist(url)
 
-    for link in tqdm(allLinks):
-       downloadVideo(link)
-
-
-
+        for video in tqdm(pl):
+            video.streams.get_highest_resolution().download()
+            
+    except :
+        print("A problem occured while dowloading playlist")
 
 print("[+] Tek video icin 1")
 print("[+] Playlist icin 2")
 select = int(input())
 
 print("Video Linki :")
-url = input()
+url = input().strip()
 print("İndirme işleminiz başlıyor..")
 print()
 
